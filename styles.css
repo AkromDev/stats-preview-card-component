@@ -1,0 +1,26 @@
+:root {
+  /* Colors main */
+  --clr-very-dark-blue: hsl(233, 47%, 7%);
+  --clr-dark-desaturated-blue: hsl(244, 38%, 16%);
+  --clr-soft-violet: hsl(277, 64%, 61%);
+
+  /* Colors neutral */
+
+  --clr-white-hsl: 0, 0%, 100%;
+  --clr-white: hsl(var(--clr-white-hsl));
+
+  /* Typography */
+
+  --fs: 15px;
+  --ff-main: "Inter", sans-serif;
+  --fw-main-bold: 700;
+  --fw-main-regular: 400;
+
+  --ff-secondary: "Lexend Deca", sans-serif;
+  --fw-secondary-regular: 400;
+}
+
+html,
+body {
+  min-height: 100%;
+}
