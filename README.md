@@ -30,7 +30,7 @@ This is my solution to the [Stats preview card component](https://www.frontendme
 
 ### Links
 
-- [Solution URL in Frontend Mentor]()
+- [Solution URL in Frontend Mentor](https://www.frontendmentor.io/solutions/stats-preview-card-component-NxKABft3m)
 - [Live Site URL](https://akromdev-stats-preview-card-component.netlify.app/)
 
 ## My process
