@@ -24,92 +24,94 @@
 html,
 body {
   height: 100%;
-  color: hsl(var(--clr-white-hsl), 0.75);
   font-size: 15px;
 }
+
 body {
   font-family: var(--ff-main);
+  background: var(--clr-very-dark-blue);
+  color: hsl(var(--clr-white-hsl), 0.75);
 }
+
 li {
   list-style: none;
 }
-h1 {
-  color: var(--clr-white);
-}
 
 .container {
-  background: var(--clr-very-dark-blue);
   min-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 5vh 5vw;
+  overflow: hidden;
 }
 
 main {
   display: flex;
   max-width: 1110px;
-  margin: 50px 100px;
   background: var(--clr-dark-desaturated-blue);
   box-shadow: 0px 20px 20px -10px var(--clr-shadow);
   border-radius: 8px;
-  overflow: hidden;
 }
+
 .left {
   flex-basis: 55%;
   margin: 72px 95px 60px 72px;
   max-width: 400px;
 }
 
-.left h1 {
+h1 {
+  color: var(--clr-white);
   font-weight: bold;
   font-size: 36px;
   line-height: 44px;
 }
-.left h1 span {
+
+h1 span {
   color: var(--clr-soft-violet);
 }
-.left p {
-  max-width: 375px;
-  margin-block: 25px;
 
-  font-size: 15px;
+.description {
+  max-width: 375px;
+  margin-top: 25px;
+  margin-bottom: 72px;
   line-height: 25px;
   mix-blend-mode: normal;
   color: hsla(var(--clr-white-hsl), 0.33);
 }
-.left ul {
+
+.stats-list {
   display: flex;
   justify-content: space-between;
   gap: 20px;
   max-width: 370px;
-  margin-top: 72px;
 }
 
-.left ul li strong {
+.stats-list li strong {
   font-weight: bold;
   font-size: 24px;
   line-height: 29px;
   color: var(--clr-white);
   display: block;
 }
-.left ul li span {
-  font-family: Lexend Deca;
-  font-style: normal;
-  font-weight: normal;
+
+.stats-list li span {
+  font-family: var(--ff-secondary);
+  color: hsla(var(--clr-white-hsl), 0.6);
   font-size: 12px;
   line-height: 25px;
-
   letter-spacing: 1px;
   text-transform: uppercase;
-
-  color: hsla(var(--clr-white-hsl), 0.6);
   mix-blend-mode: normal;
 }
+
 .right {
   background-color: var(--clr-soft-violet);
 }
-.right img {
+
+picture,
+img {
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -124,4 +126,40 @@ main {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 1000px) {
+  .left {
+    flex-basis: 50%;
+    margin: 52px 75px 40px 52px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 80px 25px;
+    text-align: center;
+  }
+  main {
+    flex-direction: column-reverse;
+    max-width: 500px;
+  }
+  .left {
+    flex-basis: auto;
+    margin: 32px;
+  }
+  .left > * {
+    max-width: 100%;
+  }
+  .stats-list {
+    flex-direction: column;
+  }
+  h1 {
+    font-size: 28px;
+    line-height: 32px;
+  }
+  .description {
+    margin-top: 16px;
+    margin-bottom: 40px;
+  }
 }
